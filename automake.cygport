@@ -1,0 +1,17 @@
+NAME="automake"
+VERSION=8
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Wrapper for multiple versions of Automake"
+REQUIRES="automake1.9 automake1.10 automake1.11 automake1.12 automake1.13"
+HOMEPAGE="http://gentoo.org/"
+SRC_URI="http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-${VERSION}.sh"
+SRC_DIR=.
+
+src_compile() { :; }
+
+src_install() {
+	newbin ${S}/am-wrapper-${VERSION}.sh automake
+	dosym automake /usr/bin/aclocal
+	keepdir /usr/share/aclocal
+}

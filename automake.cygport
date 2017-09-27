@@ -1,12 +1,14 @@
 NAME="automake"
-VERSION=8
+VERSION=10
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Wrapper for multiple versions of Automake"
-REQUIRES="automake1.9 automake1.10 automake1.11 automake1.12 automake1.13"
+REQUIRES="automake1.9 automake1.10 automake1.11 automake1.12 automake1.13 automake1.14 automake1.15"
 HOMEPAGE="http://gentoo.org/"
 SRC_URI="http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-${VERSION}.sh"
 SRC_DIR=.
+
+ARCH=noarch
 
 src_compile() { :; }
 
